@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betting App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+        body {
+  font-family: "Roboto";
+  background: url(https://images.thebetwaygroup.com/headers/ImageSet215/215_ukdws23wc2e_language-en_currency-none_goodwood.jpg);
+   
+}
+
+
+.betwayTitle {
+  font-size: 40px;
+  color: white !important;
+  margin-left: -100% !important;
+  margin-top: 15px;
+}
+
+.logininputs {
+  margin-top: 12px;
+}
+
+.username {
+  border-radius: 5px;
+  border: none;
+  font-size: 17px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  margin-right: 5px;
+}
+
+.password {
+  border-radius: 5px;
+  border: none;
+  font-size: 17px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  margin-right: 5px;
+}
+
+.submitbutton {
+  border-radius: 3px;
+  border-color: white;
+  font-size: 17px;
+  padding-left: 5px;
+  margin-right: 5px;
+  margin-top: -1px;
+}
+
+.submitbutton:hover{
+  background-color: black;
+  color: green;
+}
+
+.register{
+  margin-top: -10px;
+  margin-left: -10px;
+  color: green !important;
+}
+
+.register:hover{
+  color: #00cc00 !important;
+}
+
+.forgotpw{
+  margin-top: -10px;
+  margin-left: -10px;
+  color: green !important;
+}
+
+.forgotpw:hover{
+  color: #00cc00 !important;
+}
+
+.insidetext {
+  margin-right: 10%;
+}
+
+.insidetitle{
+  color: white;
+  margin-top: 20%;
+  /*margin-left: 60%;*/
+  text-align: right;
+  font-size: 60px;
+}
+
+.insidecontent {
+  color: white;
+  font-size: 15px;
+  /*margin-left: 40%;*/
+  text-align: right;
+}
+
+.seefullterms {
+  color: white;
+  text-decoration: underline;
+}
+
+.seefullterms:hover{
+  color: white;
+  text-decoration: none !important;
+}
+
+.betnowbutton{
+  font-size: 60px;
+  margin-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.col-md-1 {
+  width: 14.27%;
+}
+
+.bettingoptions{
+  margin-top: 20%;
+  text-align: center;
+}
+
+.sports{
+  background: black;
+  border-style: solid;
+  border-width: 5px;
+  border-top-color: #1EC94A;
+  border-left-color: black;
+  border-bottom-color: black;
+  border-right-color: black;
+  height: 300px;
+}
+
+.sportstitle{
+  color: #1EC94A;
+  text-decoration: none !important;
+  font-size: 32px;
+  margin-top: 15px;
+}
+
+.betcontent{
+  color: white;
+  text-decoration: none !important;
+  font-size: 16px;
+}
+
+.sportsbutton{
+  width: 100% !important;
+  font-size: 36px;
+  margin-top: 20px;
+  position:absolute; bottom:0;  margin-bottom:7px; margin:7px; right: 0;
+  border-style: none;
+  border-radius: 5px;
+  
+}
+
+.sportsbutton:hover{
+  display: inline-block;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 1);
+  transition: none;
+}
+
+.casino{
+  background: black;
+  border-style: solid;
+  border-width: 5px;
+  border-top-color: blue;
+  border-left-color: black;
+  border-bottom-color: black;
+  border-right-color: black;
+  height: 300px;
+}
+
+.casinotitle{
+  color: blue;
+  text-decoration: none !important;
+  font-size: 32px;
+  margin-top: 15px;
+}
+
+.casinobutton{
+  width: 100% !important;
+  font-size: 36px;
+  margin-top: 20px;
+  position:absolute; bottom:0;  margin-bottom:7px; margin:7px; right: 0;
+  border-style: none;
+  border-radius: 5px;
+}
+
+.casinobutton:hover{
+  display: inline-block;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 1);
+  transition: none;
+}
+
+.livecasino{
+  background: black;
+  border-style: solid;
+  border-width: 5px;
+  border-top-color: #80d4ff;
+  border-left-color: black;
+  border-bottom-color: black;
+  border-right-color: black;
+  height: 300px;
+}
+
+.livecasinotitle{
+  color: #80d4ff;
+  text-decoration: none !important;
+  font-size: 32px;
+  margin-top: 15px;
+}
+
+.livecasinobutton{
+  width: 100% !important;
+  font-size: 36px;
+  margin-top: 20px;
+  position:absolute; bottom:0;  margin-bottom:7px; margin:7px; right: 0;
+  border-style: none;
+  border-radius: 5px;
+}
+
+.livecasinobutton:hover{
+  display: inline-block;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 1);
+  transition: none;
+}
+
+
+.esports{
+  background: black;
+  border-style: solid;
+  border-width: 5px;
+  border-top-color: #9933ff;
+  border-left-color: black;
+  border-bottom-color: black;
+  border-right-color: black;
+  height: 300px;
+}
+
+.esportstitle{
+  color: #9933ff;
+  text-decoration: none !important;
+  font-size: 32px;
+  margin-top: 15px;
+}
+
+.esportsbutton{
+  width: 100% !important;
+  font-size: 36px;
+  margin-top: 20px;
+  position:absolute; bottom:0;  margin-bottom:7px; margin:7px; right: 0;
+  border-style: none;
+  border-radius: 5px;
+  background-color: #9933ff;
+}
+
+.esportsbutton:hover{
+  display: inline-block;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 1);
+  transition: none;
+  background-color: #9933ff;
+}
+
+.vegas{
+  background: black;
+  border-style: solid;
+  border-width: 5px;
+  border-top-color: #ff0000;
+  border-left-color: black;
+  border-bottom-color: black;
+  border-right-color: black;
+  height: 300px;
+}
+
+.vegastitle{
+  color: #ff0000;
+  text-decoration: none !important;
+  font-size: 32px;
+  margin-top: 15px;
+}
+
+.vegasbutton{
+  width: 100% !important;
+  font-size: 36px;
+  margin-top: 20px;
+  position:absolute; bottom:0;  margin-bottom:7px; margin:7px; right: 0;
+  border-style: none;
+  border-radius: 5px;
+}
+
+.vegasbutton:hover{
+  display: inline-block;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 1);
+  transition: none;
+}
+
+.poker{
+  background: black;
+  border-style: solid;
+  border-width: 5px;
+  border-top-color: #ffad33;
+  border-left-color: black;
+  border-bottom-color: black;
+  border-right-color: black;
+  height: 300px;
+}
+
+.pokertitle{
+  color: #ffad33;
+  text-decoration: none !important;
+  font-size: 32px;
+  margin-top: 15px;
+}
+
+.pokerbutton{
+  width: 100% !important;
+  font-size: 36px;
+  margin-top: 20px;
+  position:absolute; bottom:0;  margin-bottom:7px; margin:7px; right: 0;
+  border-style: none;
+  border-radius: 5px;
+}
+
+.pokerbutton:hover{
+  display: inline-block;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 1);
+  transition: none;
+}
+
+.bingo{
+  background: black;
+  border-style: solid;
+  border-width: 5px;
+  border-top-color: #ff80ff;
+  border-left-color: black;
+  border-bottom-color: black;
+  border-right-color: black;
+  height: 300px;
+}
+
+.bingotitle{
+  color: #ff80ff;
+  text-decoration: none !important;
+  font-size: 32px;
+  margin-top: 15px;
+}
+
+.bingobutton{
+  width: 100% !important;
+  font-size: 36px;
+  margin-top: 20px;
+  position:absolute; bottom:0;  margin-bottom:7px; margin:7px; right: 0;
+  border-style: none;
+  border-radius: 5px;
+  background-color: #ff80ff;
+}
+
+.bingobutton:hover{
+  display: inline-block;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 1);
+  transition: none;
+  background-color: #ff80ff;
+}
+    </style>
+</head>
+<body>
+    <div class='info'>  
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+              <div class="navbar-header">
+                <a href="" class="navbar-brand betwayTitle"> betway </a>
+              </div>
+        
+              <div class="collapse navbar-collapse navbar-right logininputs">
+        
+                <ul class="nav navbar-nav">
+        
+                  <li>
+                    <form class='userForm'>
+                        <input class='username' placeholder='username'>
+                    </form>
+                    <a href="#" class='register'> Register </a>
+                  
+                  </li>
+        
+                  <li>
+                  <form class='passwordForm'>
+                        <input class='password' placeholder='password'>
+                    </form>
+                    <a href="#" class='forgotpw'> Forgotten Password? </a>
+                  </li>
+                  
+                  <button type='button' class='submitbutton btn-success' onclick='login()'> Submit  </button> 
+        
+        
+                </ul>
+        
+              </div>
+            </div>
+          
+          </div>
+        
+        
+          <div class='insidetext'>
+        
+              <p class='insidetitle'> Bet £30 get a £30 Free Bet* <p>
+              <p class='insidecontent'> *New customers only. Free Bet is a 100% match on first deposit of £10+. Bet to be placed at odds of 1.75 or over. Bet £30 Get a £30 Free Bet. Free Bet valid for 7 days. Additional conditions apply - <a href="" class='seefullterms'> See Full Terms </a></p>
+            
+            <button type='button' class='betnowbutton btn-success pull-right' onclick='betnow()'> Bet Now </button> 
+            
+          </div>
+          
+          <div class='row bettingoptions'>
+            <a href="">
+            <div class='col-md-1 alternatewidth sports'>
+              
+              <p class='sportstitle'> sports </p>
+              <p class='betcontent'> Over 30,000 Betting Markets <br> Live Action Sports <br> In-Play Betting </p>
+              <button type='button' class='btn-success sportsbutton' onclick=""> Find Out More </button> 
+         
+            </div>
+            </a>
+            
+            
+            <a href="">
+            <div class='col-md-1 alternatewidth casino'>
+              
+              <p class='casinotitle'> casino </p>
+              <p class='betcontent'> Over 500 Casino Classics <br> Award-Winning Software <br> Pay Out Percentages of Over 97% </p>
+              <button type='button' class='btn-primary casinobutton' onclick=""> Find Out More </button> 
+         
+            </div>
+            </a>
+            
+            
+            <a href="">
+            <div class='col-md-1 alternatewidth livecasino'>
+              
+              <p class='livecasinotitle'> live-casino </p>
+              <p class='betcontent'> Over 40 Tables Live Streamed in High Definition <br> Live Dealer Interaction from the Finest Croupiers in the World <br> Exclusive Daily Betway Promotions </p>
+              <button type='button' class='btn-info livecasinobutton' onclick=""> Find Out More </button> 
+         
+            </div>
+            </a>
+            
+            
+            <a href="">
+            <div class='col-md-1 alternatewidth esports'>
+              
+              <p class='esportstitle'> esports </p>
+              <p class='betcontent'> The Biggest Selection of eSports Games <br> The World's Best Tournaments <br> Live In-Play Betting </p>
+              <button type='button' class='btn-info esportsbutton' onclick=""> Find Out More </button> 
+         
+            </div>
+            </a>
+            
+            
+            <a href="">
+            <div class='col-md-1 alternatewidth vegas'>
+              
+              <p class='vegastitle'> vegas </p>
+              <p class='betcontent'> The Buzz of a Las Vegas Casino <br> A Showcase of Slots <br> 100s of Casino Greats </p>
+              <button type='button' class='btn-danger vegasbutton' onclick=""> Find Out More </button> 
+         
+            </div>
+            </a>
+            
+            
+            <a href="">
+            <div class='col-md-1 alternatewidth poker'>
+              
+              <p class='pokertitle'> poker </p>
+              <p class='betcontent'> The Buzz of a Las Vegas Casino <br> A Showcase of Slots <br> 100s of Casino Greats </p>
+              <button type='button' class='btn-warning pokerbutton' onclick=""> Find Out More </button> 
+         
+            </div>
+            </a>
+            
+            
+            <a href="#">
+            <div class='col-md-1 alternatewidth bingo'>
+              
+              <p class='bingotitle'> bingo </p>
+              <p class='betcontent'> 75 and 90 Ball Bingo Games <br> Chat Hosts and Social Gaming <br> Fab Promotions and Competitions </p>
+              <button type='button' class='btn-warning bingobutton'> Find Out More </button> 
+         
+            </div>
+            </a>
+              
+          </div>
+          
+          
+        
+        
+          
+        </div>
+        
+        
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700,300&amp;lang=en" />
+</body>
+</html>
